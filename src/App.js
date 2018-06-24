@@ -4,14 +4,14 @@ import Home from './Home'
 import Detail from './Detail'
 import businesses from './businesses-data'
 import reviewsData from './reviews-data'
-import { average, transformReviews } from './helpers'
+import { average, transformReviewsToScoreMap } from './helpers'
 
-const transformedReviews = transformReviews(reviewsData)
-const businessesWithReview = businesses.map(business => ({
+const scores = transformReviewsToScoreMap(reviewsData)
+const businessesWithRatings = businesses.map(business => ({
   ...business,
-  review: (() => {
-    const reviewArr = transformedReviews[business.id]
-    return `${reviewArr ? average(reviewArr) : '0'} / 5`
+  rating: (() => {
+    const businessScores = scores[business.id]
+    return businessScores ? average(businessScores) : null
   })(),
 }))
 
@@ -19,7 +19,7 @@ class App extends Component {
   defaultCategory = 'All'
 
   state = {
-    businesses: businessesWithReview,
+    businesses: businessesWithRatings,
     selectedCategory: this.defaultCategory,
   }
 

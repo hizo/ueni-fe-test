@@ -1,5 +1,7 @@
 import React from 'react'
 
+const ratingToStr = (review, max) => (review ? `${review} / ${max}` : 'No reviews')
+
 const Detail = ({ business }) => {
   return (
     <section>
@@ -11,7 +13,7 @@ const Detail = ({ business }) => {
         {business.city}, {business.country}
       </p>
       <p>{business.description}</p>
-      <p>Rating: {business.review}</p>
+      <p>Rating: {ratingToStr(business.rating, 5)}</p>
       <p>Category: {business.category}</p>
     </section>
   )
