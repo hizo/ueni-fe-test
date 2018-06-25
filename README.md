@@ -1,6 +1,6 @@
-# UENI Front-end Interview Test
+# Task
 
-Task: Build a basic web application with ReactJS based on the assets in the zip file provided.
+Build a basic web application with ReactJS based on the assets in the zip file provided.
 
 Files:
 
