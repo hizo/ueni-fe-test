@@ -7,6 +7,8 @@ const orderOpts = {
 }
 
 const Sorter = ({ order, onSort }) => {
+  order = order || orderOpts.desc
+
   const handleClick = () => {
     const nextOrder = order === orderOpts.asc ? orderOpts.desc : orderOpts.asc
     onSort({
@@ -15,7 +17,6 @@ const Sorter = ({ order, onSort }) => {
     })
   }
 
-  order = order || orderOpts.desc
   return (
     <Button onClick={handleClick} block>
       Sort: {order === orderOpts.desc ? 'A-Z' : 'Z-A'}

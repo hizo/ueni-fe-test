@@ -9,10 +9,7 @@ import { average, transformReviewsToScoreMap } from './helpers'
 const scores = transformReviewsToScoreMap(reviewsData)
 const businessesWithRatings = businesses.map(business => ({
   ...business,
-  rating: (() => {
-    const businessScores = scores[business.id]
-    return businessScores ? average(businessScores) : null
-  })(),
+  rating: scores[business.id] ? average(scores[business.id]) : null,
 }))
 
 class App extends Component {

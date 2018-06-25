@@ -18,19 +18,6 @@ const CategoryFilter = ({ defaultCategory, selectedCategory, categories, onSelec
       ))}
     </Dropdown.Menu>
   </Dropdown>
-  // <DropdownButton
-  //   bsStyle="default"
-  //   title={`Category: ${selectedCategory || 'All'}`}
-  //   id="category-filter">
-  //   <MenuItem eventKey="" onSelect={onSelect}>
-  //     All
-  //   </MenuItem>
-  //   {categories.map(category => (
-  //     <MenuItem key={`category_${category.toLowerCase()}`} eventKey={category} onSelect={onSelect}>
-  //       {category}
-  //     </MenuItem>
-  //   ))}
-  // </DropdownButton>
 )
 
 export default CategoryFilter
