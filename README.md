@@ -43,6 +43,8 @@ businesses-data.json has all the needed data for step-1. For step-2 you will nee
 - I used `grid-styled` for a flexbox based grid-like layout. I am not using **CSS Grid** in production yet. `styled-components` are used for further manual CSS rules in a couple of places.
 - I used `react-router` to get the job done fast. Also overkill for 2 pages.
 
+### `npm install` or `yarn`
+
 ### `npm start` or `yarn start`
 
 Runs the app in development mode.
