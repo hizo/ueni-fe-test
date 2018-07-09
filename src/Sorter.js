@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Button } from 'react-bootstrap'
 
 const orderOpts = {
@@ -22,6 +23,11 @@ const Sorter = ({ order, onSort }) => {
       Sort: {order === orderOpts.desc ? 'A-Z' : 'Z-A'}
     </Button>
   )
+}
+
+Sorter.propTypes = {
+  order: PropTypes.oneOf([orderOpts.asc, orderOpts.desc]),
+  onSort: PropTypes.func.isRequired,
 }
 
 export default Sorter

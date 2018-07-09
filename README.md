@@ -4,10 +4,10 @@ Build a basic web application with ReactJS based on the assets in the zip file p
 
 Files:
 
-- step_1.png
-- step_2.png
-- reviews-data.json
-- businesses-data.json
+- `step_1.png`
+- `step_2.png`
+- `src/reviews-data.json`
+- `src/businesses-data.json`
 
 ## Application
 

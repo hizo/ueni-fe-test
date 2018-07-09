@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { Box } from 'grid-styled'
 import { Button } from 'react-bootstrap'
 import { media } from './helpers'
+import { businessShape } from './Business'
 import Media from './Media'
 import Wrapper from './Wrapper'
 import ResponsiveThumbnail from './ResponsiveThumbnail'
@@ -50,5 +51,9 @@ const Detail = ({ business }) => (
     </Media>
   </Wrapper>
 )
+
+Detail.propTypes = {
+  business: businessShape.isRequired,
+}
 
 export default Detail

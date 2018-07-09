@@ -10,14 +10,20 @@ const StyledFooter = styled(Box)`
   width: 100%;
 `
 
-class NewMedia extends React.Component {
-  static Figure = ({ width, children }) => <Box width={width || [1, 0.5, 0.5]}>{children}</Box>
-  static Body = ({ children }) => (
-    <Box width={[1, 0.5, 0.5]} flex="1">
-      <StyledBody flexDirection="column">{children}</StyledBody>
-    </Box>
-  )
-  static Footer = ({ children }) => <StyledFooter alignSelf="flex-end">{children}</StyledFooter>
+class Media extends React.Component {
+  static Figure = function Figure({ width, children }) {
+    return <Box width={width || [1, 0.5, 0.5]}> {children}</Box>
+  }
+  static Body = function Body({ children }) {
+    return (
+      <Box width={[1, 0.5, 0.5]} flex="1">
+        <StyledBody flexDirection="column">{children}</StyledBody>
+      </Box>
+    )
+  }
+  static Footer = function Footer({ children }) {
+    return <StyledFooter alignSelf="flex-end">{children}</StyledFooter>
+  }
 
   render() {
     return (
@@ -28,4 +34,4 @@ class NewMedia extends React.Component {
   }
 }
 
-export default NewMedia
+export default Media

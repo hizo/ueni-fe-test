@@ -62,9 +62,8 @@ class App extends Component {
               <Home
                 businesses={businesses.filter(
                   business =>
-                    selectedCategory === this.defaultCategory
-                      ? true
-                      : business.category === selectedCategory,
+                    selectedCategory === this.defaultCategory ||
+                    business.category === selectedCategory,
                 )}
                 getCategoryFilterProps={this.categoryFilterPropGetter}
                 getSorterProps={this.sorterPropsGetter}

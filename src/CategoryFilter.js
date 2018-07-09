@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { MenuItem, Dropdown } from 'react-bootstrap'
 
 const CategoryFilter = ({ defaultCategory, selectedCategory, categories, onSelect }) => (
@@ -19,5 +20,12 @@ const CategoryFilter = ({ defaultCategory, selectedCategory, categories, onSelec
     </Dropdown.Menu>
   </Dropdown>
 )
+
+CategoryFilter.propTypes = {
+  categories: PropTypes.arrayOf(PropTypes.string).isRequired,
+  defaultCategory: PropTypes.string.isRequired,
+  selectedCategory: PropTypes.string,
+  onSelect: PropTypes.func.isRequired,
+}
 
 export default CategoryFilter

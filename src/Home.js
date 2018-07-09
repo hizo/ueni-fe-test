@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Business from './Business'
 import Sorter from './Sorter'
 import CategoryFilter from './CategoryFilter'
@@ -26,5 +27,11 @@ const Home = ({ businesses, getCategoryFilterProps, getSorterProps }) => (
     </Flex>
   </Wrapper>
 )
+
+Home.propTypes = {
+  businesses: PropTypes.arrayOf(PropTypes.object).isRequired,
+  getCategoryFilterProps: PropTypes.func.isRequired,
+  getSorterProps: PropTypes.func.isRequired,
+}
 
 export default Home

@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import { Button } from 'react-bootstrap'
 import styled from 'styled-components'
@@ -49,5 +50,21 @@ const Business = ({ business }) => (
     </Media>
   </StyledBusiness>
 )
+
+export const businessShape = PropTypes.shape({
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
+  city: PropTypes.string.isRequired,
+  country: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  href: PropTypes.string.isRequired,
+  imageUrl: PropTypes.string.isRequired,
+  rating: PropTypes.string,
+})
+
+Business.propTypes = {
+  business: businessShape.isRequired,
+}
 
 export default Business

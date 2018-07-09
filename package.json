@@ -5,6 +5,7 @@
   "dependencies": {
     "bootstrap": "^3.3.7",
     "grid-styled": "^4.2.0",
+    "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-bootstrap": "^0.32.1",
     "react-dom": "^16.4.1",
